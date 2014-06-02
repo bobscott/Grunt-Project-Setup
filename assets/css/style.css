@@ -1,0 +1,39 @@
+/* line 1, ../src/sass/modules/_reset.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 5, ../src/sass/modules/_reset.scss */
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+}
+
+/* line 13, ../src/sass/modules/_reset.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 17, ../src/sass/modules/_reset.scss */
+a img {
+  border: none;
+}
+
+/* line 21, ../src/sass/modules/_reset.scss */
+button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* line 42, sprites/*.png */
+.sprites-sprite {
+  background: url('../images/sprites-s10c4527d51.png') no-repeat;
+}

@@ -4,11 +4,15 @@
 // modules
 @import "modules/reset";
 @import "modules/fonts";
+@import "modules/sprites";
+@import "modules/colors";
+@import "modules/sizes";
 
 // partials
-@import "partials/sprites";
 @import "partials/header";
 @import "partials/forms";
-@import "partials/aside";
 @import "partials/footer";
 @import "partials/global";
+
+// pages
+@import "pages/home";
