@@ -30,19 +30,21 @@ module.exports = function(grunt) {
         concat: { 
             dist: {
                 src: [
-                    'assets/src/js/third_party/jquery-1.11.1.min.js',
-                    'assets/src/js/third_party/*.js',
-                    'assets/src/js/global.js'
+                    'assets/js/third_party/jquery-1.11.1.min.js',
+                    'assets/js/third_party/*.js',
+                    'assets/js/*.js',
+                    '!assets/js/all_scripts.js',
+                    '!assets/js/all_scripts.min.js'
                 ],
-                dest: 'assets/js/production.js',
+                dest: 'assets/js/all_scripts.js',
             }
         },
 
         // Minifies javascript files
         uglify: {
             build: {
-                src: 'assets/js/production.js',
-                dest: 'assets/js/production.min.js'
+                src: 'assets/js/all_scripts.js',
+                dest: 'assets/js/all_scripts.min.js'
             }
         },
 
@@ -50,7 +52,7 @@ module.exports = function(grunt) {
         compass: {
             dist: {
                 options: {
-                    config: 'assets/src/sass/config.rb'
+                    config: 'assets/sass/config.rb'
                 }
             }
         },
@@ -93,14 +95,14 @@ module.exports = function(grunt) {
         // Watches for changes then executes tasks
         watch: {
             scripts: {
-                files: ['assets/src/js/**/*.js'],
+                files: ['assets/js/**/*.js'],
                 tasks: ['concat', 'uglify', 'notify:js'],
                 options: {
                     spawn: false,
                 },
             },
             css: {
-                files: ['assets/src/sass/**/*.scss'],
+                files: ['assets/sass/**/*.scss'],
                 tasks: ['compass', 'autoprefixer', 'cssmin', 'notify:compass'],
                 options: {
                     spawn: false,

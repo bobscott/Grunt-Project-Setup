@@ -1,6 +1,6 @@
 http_path = "/"
 css_dir = "assets/css"
-sass_dir = "assets/src/sass"
+sass_dir = "assets/sass"
 images_dir = "assets/images"
 
 relative_assets = true
