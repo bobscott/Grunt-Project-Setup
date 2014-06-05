@@ -14,11 +14,6 @@ module.exports = function(grunt) {
                    message: 'SASS compiled'
                 }
             },
-            images: {
-                options: {
-                    message: 'Images minified'
-                }
-            },
             watch: {
                 options: {
                     message: 'Watch is running'
@@ -121,5 +116,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-notify');
 
-    grunt.registerTask('default', ['concat', 'uglify', 'compass', 'autoprefixer', 'cssmin', 'imagemin', 'watch']);
+    grunt.registerTask('default', ['concat', 'uglify', 'compass', 'autoprefixer', 'cssmin', 'watch']);
 };
